@@ -1,0 +1,64 @@
+
+<body>
+
+    <main class="content">
+
+        <div class="card centered-card">
+            <img src="./assets/layout/images/app_logo_light.png" alt="System logo" class="logo-img">
+            <div class="text-section">
+                <h1>SystemModern:</h1>
+                <div class="server-date">
+                    Server Date: <span id="current-date" aria-live="polite">{{serverDate}}</span>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="tools">
+            <h2>Tools</h2>
+            <div class="flex">
+                <button class="button" aria-label="Trash">
+                    <i class="pi pi-trash" aria-hidden="true"></i> Trash
+                </button>
+                <button class="button" aria-label="Activity Log">
+                    <i class="pi pi-list" aria-hidden="true"></i> Activity Log
+                </button>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="tools">
+            <h2>Settings</h2>
+            <div class="flex">
+                <button class="button" aria-label="Entity">
+                    <i class="pi pi-building" aria-hidden="true"></i> Entity
+                </button>
+                <button class="button" aria-label="Preferences">
+                    <i class="pi pi-cog" aria-hidden="true"></i> Preferences
+                </button>
+                <button class="button" aria-label="Users">
+                    <i class="pi pi-users" aria-hidden="true"></i> Users
+                </button>
+                <button class="button" aria-label="Roles">
+                    <i class="pi pi-user" aria-hidden="true"></i> Roles
+                </button>
+                <button class="button" aria-label="About">
+                    <i class="pi pi-info-circle" aria-hidden="true"></i> About
+                </button>
+            </div>
+        </section>
+    </main>
+    <script>
+    // Añadir eventos de click a los botones
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            alert(`You clicked: ${this.textContent.trim()}`);
+           });
+        });
+    </script>
+</body>
+
+
+

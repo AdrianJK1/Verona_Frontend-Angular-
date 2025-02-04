@@ -8,11 +8,11 @@
                     }
                 }
             }
-            
+
             .topbar-menubutton {
                 display: none;
             }
-            
+
             .layout-sidebar {
                 width: 5rem;
                 overflow: visible;
@@ -21,7 +21,7 @@
                     overflow: auto;
                     display: flex;
                     justify-content: center;
-                    padding: 0;  
+                    padding: 0;
 
                     &::-webkit-scrollbar {
                         display: none;
@@ -32,6 +32,16 @@
             .layout-content-wrapper {
                 margin-left: 5rem;
             }
+
+             // Posicionar el "User Manual" al fondo
+             .user-manual-item {
+              margin-top: auto;
+              padding: 0.5rem 0;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+               border-top: 1px solid var(--v-menuitem-border-color);
+             }
 
             .layout-menu {
                 .layout-root-menuitem {
@@ -94,27 +104,27 @@
                             a {
                                 padding-left: 0.5rem;
                             }
-            
+
                             li {
                                 a {
                                     padding-left: 1.5rem;
                                 }
-            
+
                                 li {
                                     a {
                                         padding-left: 2.5rem;
                                     }
-            
+
                                     li {
                                         a {
                                             padding-left: 3.5rem;
                                         }
-            
+
                                         li {
                                             a {
                                                 padding-left: 4.5rem;
                                             }
-            
+
                                             li {
                                                 a {
                                                     padding-left: 5.5rem;

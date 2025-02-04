@@ -2,11 +2,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AppLayoutComponent } from './layout/app.layout.component';
 
+//Importarcion de Nuevos Componentes
+import { HomeComponent } from './demo/components/features/home/home.component';
+
 const routes: Routes = [
     {
         path: '', component: AppLayoutComponent,
         children: [
-            { path: '', loadChildren: () => import('./demo/components/dashboards/dashboards.module').then(m => m.DashboardsModule) },
+            { path: '', component: HomeComponent },
+            //Rutas nuevas agregadas--------
+            { path: 'features', data: {breadcrumb: 'Features' }, loadChildren: () => import('./demo/components/features/features.module').then(m => m.UIFeaturesModule)},
+            { path: 'home', loadChildren: () => import('./demo/components/features/home/home.module').then(m => m.HomeModule) },
+
             { path: 'uikit', data: { breadcrumb: 'UI Kit' }, loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
             { path: 'utilities', data: { breadcrumb: 'Utilities' }, loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
             { path: 'pages', data: { breadcrumb: 'Pages' }, loadChildren: () => import('./demo/components/pages/pages.module').then(m => m.PagesModule) },
